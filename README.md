@@ -11,7 +11,7 @@ Now that both of the Apps are running, we need to make sure they communicate wit
 ###### Important:  do the following:
 
 ###### Click on window -> type run and hit enter -> in the command window copy:
-* chrome.exe --user-data-dir="C://Chrome dev session" --disable-web-security* 
+* chrome.exe --user-data-dir="C://Chrome dev session" --disable-web-security
 
 This will open a new "Chrome" window which you to test your front-end app (use http://localhost:4200/).
 . This is a temporary solution to get around CORS on chrome.
