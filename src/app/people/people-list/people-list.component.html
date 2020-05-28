@@ -1,0 +1,51 @@
+
+<div class="row py-2"> 
+    <div class="col-md-offset-10 col-md-2">
+      <a href="#">Add new People</a>
+    </div>
+  </div>
+  <br>
+  <div class="row"> 
+    <div class="form-group col-sm-1 text-right py-2">
+        <label for="dosearch">Find : </label>
+      </div>      
+      <div class="form-group col-sm-11">
+        <input class="form-control rounded-5 py-2" type="search" value="" id="dosearch" placeholder="Not implemented">
+      </div>      
+  </div>
+  <br/>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Age</th>
+                <th>Interest</th>
+                <!-- <th>Picture</th> -->
+                <th>Create on</th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let person of people">
+                <td>{{person.firstName}} {{person.lastName}}</td>
+                <td>{{person.address}}</td>
+                <td>{{person.age}}</td>
+                <td>{{person.interest}}</td>
+                <!-- <td>{{person.pictureUrl}}</td> -->
+              <td>{{person.createDate | date: 'MM/dd/yyyy'}}</td>
+              <td><button type="button" id="details" class="btn btn-light">Details</button></td>
+              <td><button type="button" id="update" class="btn btn-success">Update</button></td>
+              <td><button type="button" id="delete" class="btn btn-danger">Delete</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
